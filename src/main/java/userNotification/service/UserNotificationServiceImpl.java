@@ -14,7 +14,7 @@ public class UserNotificationServiceImpl implements UserNotificationService {
     private final String DELETE = "Здравствуйте! Ваш аккаунт был удалён";
 
 
-    @KafkaListener(topics = "${spring.kafka.topic.user.user-created-del-topic}", groupId = "userAPP")
+    @KafkaListener(topics = "${spring.kafka.topic.user-notifications}", groupId = "${spring.kafka.consumer.group-id}")
     public void listen(String message) {
         log.info("Начинаем обрабатывать запрос с kafka " + message);
         sendNotification(message);

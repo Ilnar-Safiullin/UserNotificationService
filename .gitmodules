@@ -1,3 +1,0 @@
-[submodule "notification-service"]
-	path = notification-service
-	url = https://github.com/Ilnar-Safiullin/UserNotificationService.git
